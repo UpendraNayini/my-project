@@ -1,10 +1,25 @@
-package com.niit.shoppingart;
+package com.niit.shoppingcart.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component
+@Table
 public class Category {
 	
+	
+	@Id
 	private String id;
+	
 	private String name;
+	
 	private String description;
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -24,7 +39,12 @@ public class Category {
 		this.description = description;
 	}
 	
-}	
 	
+	public Category get(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	}
 
 

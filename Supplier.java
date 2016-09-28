@@ -1,42 +1,86 @@
-package com.niit.ShopingCart;
+package com.niit.shoppingcart.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Entity
+@Table
+@Component
 public class Supplier {
+
+	@javax.persistence.Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "Id")
+	private int id;
+	@NotNull
+	private int supid;
+	@NotNull
+	private String supname;
+	@NotNull
+	private String suplocation;
+	@NotNull
+	private int categoryid;
+	@NotNull
+	private String categoryname;
+	@NotNull
+	private int productid;
+	@NotNull
+	private String productname;
 	
-	private String id;
-	private String name;
-	private String address;
-	private List<Product> products;
-	public Supplier(String id, String name, String address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.address = address;
-	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getSuplocation() {
+		return suplocation;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setSuplocation(String suplocation) {
+		this.suplocation = suplocation;
 	}
-	public String getAddress() {
-		return address;
+	public int getSupid() {
+		return supid;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setSupid(int supid) {
+		this.supid = supid;
 	}
-	public List<Product> getProducts() {
-		return products;
+	public String getSupname() {
+		return supname;
 	}
-	public void setProducts(List<Product> products) {
-		this.products = products;
+	public void setSupname(String supname) {
+		this.supname = supname;
 	}
-}
+	public int getCategoryid() {
+		return categoryid;
+	}
+	public void setCategoryid(int categoryid) {
+		this.categoryid = categoryid;
+	}
+	public String getCategoryname() {
+		return categoryname;
+	}
+	public void setCategoryname(String categoryname) {
+		this.categoryname = categoryname;
+	}
+	public int getProductid() {
+		return productid;
+	}
+	public void setProductid(int productid) {
+		this.productid = productid;
+	}
+	public String getProductname() {
+		return productname;
+	}
+	public void setProductname(String productname) {
+		this.productname = productname;
+	}
 	
+	
+}
